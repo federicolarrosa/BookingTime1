@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "148770897839",
+    "firebase_url": "https://bookingtime-2a2c0.firebaseio.com",
+    "project_id": "bookingtime-2a2c0",
+    "storage_bucket": "bookingtime-2a2c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148770897839:android:879d9b54347286b95bb95a",
+        "android_client_info": {
+          "package_name": "com.example.bookingtime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148770897839-b3p82b92hid6g43nkv6796ac4gekev2v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bookingtime",
+            "certificate_hash": "600ba2179f04fbbe7d52d5940343b768644af9c1"
+          }
+        },
+        {
+          "client_id": "148770897839-ksn09vctfkm2bf3c34qu3s9o83nnsiu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw2yYrNcGSN4bYgClpshCJy-1U4LYDx-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148770897839-ksn09vctfkm2bf3c34qu3s9o83nnsiu3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:148770897839:android:e47946a4e2fcbc855bb95a",
+        "android_client_info": {
+          "package_name": "com.example.bookingtimeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "148770897839-fhhvmst8ds338qfc2vs5nio4j29ak5ob.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bookingtimeapp",
+            "certificate_hash": "600ba2179f04fbbe7d52d5940343b768644af9c1"
+          }
+        },
+        {
+          "client_id": "148770897839-ksn09vctfkm2bf3c34qu3s9o83nnsiu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBw2yYrNcGSN4bYgClpshCJy-1U4LYDx-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "148770897839-ksn09vctfkm2bf3c34qu3s9o83nnsiu3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

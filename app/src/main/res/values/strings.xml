@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">bookingtime</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email" translatable="false">Usuario</string>
+    <string name="prompt_password" translatable="false">Contraseña</string>
+    <string name="action_sign_in" translatable="false">Iniciar Sesión</string>
+    <string name="action_sign_in_short" translatable="false">Registrarse</string>
+    <string name="invalid_username" translatable="false">Nombre de Usuario invalido</string>
+    <string name="invalid_password" translatable="false">La contraseña tiene que tener mas de 8 caracteres</string>
+    <string name="login_failed" translatable="false">"Login fallido"</string>
+    <string name="todo">TODO</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="imagen" translatable="false">imagen</string>
+    <string name="icono" translatable="false">icono</string>
+    <string name="registrarse">Registrarse</string>
+    <string name="registro">Registro de Usuario</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="nombres">Nombres</string>
+    <string name="contraseña">Contraseña</string>
+    <string name="repetir_contraseña">Repetir Contraseña</string>
+    <string name="bookingtime">bookingtime</string>
+    <string name="numero_de_celular">Numero de celular</string>
+
+    <string name="codigo_escaneado">Codigo Escaneado</string>
+    <string name="escanear_codigo">Escanear codigo</string>
+    <string name="guardar">Guardar</string>
+    <string name="generar">Generar</string>
+    <string name="gen">gen</string>
+    <string name="escribe_aqu">Escribe aquí...</string>
+    <string name="Agradecer">BookingTime le Agradese su Reserva pase este codigo en la entrada del restaurante </string>
+    <string name="generar1">generar</string>
+    <string name="menu_1">Menu 1</string>
+    <string name="mesa_n">Mesa Nº:</string>
+    <string name="num">Num</string>
+    <string name="menu">Menu:</string>
+    <string name="bookingtime_ventana_reservas">BookingTime Ventana Reservas</string>
+
+    <string name="nombre">Nombre: </string>
+    <string name="direccion"> Dirección: </string>
+    <string name="estacionamiento"> Estacionamiento: </string>
+    <string name="fumar"> Fumar: </string>
+    <string name="horarios"> Horarios: </string>
+    <string name="tarjetas"> Tarjetas: </string>
+    <string name="telefono"> Teléfono: </string>
+    <string name="tipoComida"> Tipo de comida: </string>
+    <string name="wifi"> Wifi: </string>
+    <string name="email"> Email: </string>
+    <string name="check">Check Details: </string>
+    <string name="pNombre">Nombre</string>
+    <string name="ptipoComida">Tipo de Comida</string>
+    <string name="pTelefono">Telefono</string>
+    <string name="pUbicacion">Ubicacion</string>
+    <string name="pEmail">Email</string>
+    <string name="pResumen">Resumen </string>
+    <string name="resumen"> Resumen: </string>
+    <string name="wifi1">Wifi</string>
+    <string name="aceptamos_tarjetas">Aceptamos tarjetas</string>
+    <string name="permitido_fumar">Permitido fumar</string>
+    <string name="estacionamiento1">Estacionamiento</string>
+    <string name="todo1">TODO</string>
+    <string name="cerrar_sesion">Cerrar Sesion</string>
+    <string name="restaurantes">restaurantes</string>
+    <string name="lector_qr">Lector QR</string>
+
+</resources>
