@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="Hora">
-        <item>   20:00   </item>
-        <item>   20:15   </item>
-        <item>   20:30   </item>
+        <item>20:00</item>
+        <item>20:15</item>
+        <item>20:30</item>
         <item>20:45</item>
         <item>21:00</item>
         <item>21:15</item>
@@ -41,6 +41,14 @@
         <item>20</item>
     </string-array>
 
+    <string-array name="TipoComida">
+        <item>Vegana</item>
+        <item>Vegetariana</item>
+        <item>Parrilla</item>
+        <item>Pizzetas</item>
+        <item>Chivitos</item>
+        <item>Postres</item>
+    </string-array>
 
 
 </resources>

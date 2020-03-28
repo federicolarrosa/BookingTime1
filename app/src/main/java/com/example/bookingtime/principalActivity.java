@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -21,7 +22,14 @@ public class principalActivity extends AppCompatActivity {
         Button btnrestaurantes = findViewById(R.id.btnRestaurantes);
         Button btnLector = findViewById(R.id.btnLector);
         Button btnrestaurant= findViewById(R.id.btnrestaurant);
+        Button btnCargarMenu= findViewById(R.id.btnCargarMenu);
 
+        btnCargarMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CargarMenu();
+            }
+        });
         btnReservaFecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,6 +66,7 @@ public class principalActivity extends AppCompatActivity {
 
 
         }
+
    private void restaurante(){
        startActivity(new Intent(this,Main2Activity.class));
    }
@@ -70,6 +79,9 @@ public class principalActivity extends AppCompatActivity {
     private void reservaHoraMesa(){
         startActivity(new Intent(this,reservaHoraMesa.class));
 }
+    private void CargarMenu(){
+        startActivity(new Intent(this,CargarMenu.class));
+    }
 }
 
 
