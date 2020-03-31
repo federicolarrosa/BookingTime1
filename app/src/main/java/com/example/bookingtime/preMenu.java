@@ -52,8 +52,10 @@ public class preMenu extends AppCompatActivity {
 
     }
     private void siguiente() {
+        Intent intent = new Intent(preMenu.this, Menu.class);
+        intent.putExtra("personas",personfinal.getText().toString());
+        this.startActivity(intent);
 
-        startActivity(new Intent(this, reservaHoraMesa.class));
     }
     private void modificar(){
         startActivity(new Intent(this, reservaHoraMesa.class));

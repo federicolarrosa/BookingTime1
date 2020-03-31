@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+
 
 import java.util.ArrayList;
 
@@ -68,7 +68,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.RestauranteViewHol
 
 
 
-        //restauranteViewHolder.imagen_cardview
+
 
         restauranteViewHolder.nombre_cardview.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,6 +110,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.RestauranteViewHol
         private TextView tipoComida_cardview;
         private TextView resumen_cardview;
         private ImageView imagen_cardview;
+
 
         public RestauranteViewHolder(View itemView) {
             super(itemView);

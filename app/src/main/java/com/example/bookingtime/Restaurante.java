@@ -2,6 +2,7 @@ package com.example.bookingtime;
 
 import android.media.Image;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class Restaurante {
     private String Direccion;

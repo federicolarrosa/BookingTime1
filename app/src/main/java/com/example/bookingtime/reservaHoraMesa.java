@@ -76,9 +76,9 @@ public class reservaHoraMesa extends AppCompatActivity  implements View.OnClickL
         M15.setOnClickListener(this);
 
 
-        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.Hora,android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.Hora,R.layout.spinner_item_bookingtime);
         horaRes.setAdapter(adapter);
-        ArrayAdapter<CharSequence> adapter1=ArrayAdapter.createFromResource(this,R.array.Personas,android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter1=ArrayAdapter.createFromResource(this,R.array.Personas,R.layout.spinner_item_bookingtime);
         personRes.setAdapter(adapter1);
 
      horaRes.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -98,7 +98,7 @@ public class reservaHoraMesa extends AppCompatActivity  implements View.OnClickL
          @Override
          public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-             personSel.setText("Personas: "+adapter1.getItem(i).toString());
+             personSel.setText(adapter1.getItem(i).toString());
 
 
          }

@@ -47,7 +47,16 @@
         <item>Parrilla</item>
         <item>Pizzetas</item>
         <item>Chivitos</item>
+        <item>Bebidas</item>
         <item>Postres</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="TipoMenu">
+        <item>Menu</item>
+        <item>Bebidas</item>
+        <item>Postres</item>
+
     </string-array>
 
 
