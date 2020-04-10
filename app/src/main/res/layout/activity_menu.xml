@@ -17,12 +17,32 @@
             android:orientation="vertical" >
 
             <TextView
+                android:id="@+id/nRestaurantes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="32dp"
+                android:text="Nombre Restaurante"
+                android:textAlignment="center"
+                android:textColor="#FF5722"
+                android:textSize="30sp" />
+
+            <Spinner
+                android:id="@+id/spinnerPerson"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="32dp" />
+
+            <TextView
                 android:id="@+id/textView14"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="24dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
                 android:text="Persona N°"
                 android:textAlignment="center"
                 android:textSize="18sp" />
@@ -58,8 +78,9 @@
                 android:layout_marginTop="14dp"
                 android:layout_marginEnd="32dp"
                 android:text="Menu"
-                android:textAlignment="textStart"
-                android:textSize="18sp" />
+                android:textAlignment="center"
+                android:textColor="#FF3D00"
+                android:textSize="24sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/MenuRecyclerView"
@@ -79,7 +100,9 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
                 android:text="Bebidas"
-                android:textSize="18sp" />
+                android:textAlignment="center"
+                android:textColor="#FF5722"
+                android:textSize="24sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/BebidasRecyclerView"
@@ -97,7 +120,10 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp"
                 android:text="Postres"
-                android:textSize="18sp" />
+                android:textAlignment="center"
+                android:textColor="#FF5722"
+                android:textIsSelectable="false"
+                android:textSize="24sp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/PostresRecyclerView"
@@ -106,6 +132,17 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="16dp" />
+
+            <Button
+                android:id="@+id/btnPrePago"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="16dp"
+                android:text="Hacer pedido" />
+
         </LinearLayout>
     </ScrollView>
 

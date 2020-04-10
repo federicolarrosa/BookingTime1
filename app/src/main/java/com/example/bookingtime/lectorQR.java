@@ -24,7 +24,7 @@ public class lectorQR extends AppCompatActivity {
 
         txCodigo= findViewById(R.id.txcodigo);
         btnEsc= findViewById(R.id.btnEscan);
-        btnRes= findViewById(R.id.btnRes);
+      //  btnRes= findViewById(R.id.btnRes);
         // boton generar
         btnRes.setOnClickListener(new View.OnClickListener() {
             @Override

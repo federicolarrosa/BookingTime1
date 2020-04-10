@@ -21,11 +21,22 @@
 
 
             <TextView
+                android:id="@+id/nRest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:text="Nombre Restaurante"
+                android:textAlignment="center"
+                android:textSize="30sp" />
+
+            <TextView
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
                 android:text="Ahora selecciona la hora"
                 android:textAlignment="center"
@@ -117,28 +128,24 @@
                     android:layout_height="match_parent"
                     android:gravity="center">
 
-                    <ToggleButton
-                        android:id="@+id/M01"
+                    <Button
+                        android:id="@+id/M1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ToggleButton"
-                        android:textOff="disponible"
-                        android:textOn="reservada" />
+                        android:text="1" />
 
-                    <ToggleButton
-                        android:id="@+id/M02"
+                    <Button
+                        android:id="@+id/M2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textOff="disponible"
-                        android:textOn="Reservada" />
+                        android:text="2" />
 
-                    <ToggleButton
-                        android:id="@+id/M03"
+                    <Button
+                        android:id="@+id/M3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ToggleButton"
-                        android:textOff="disponible"
-                        android:textOn="reservada" />
+                        android:text="3" />
+
                 </TableRow>
 
                 <TableRow
@@ -147,24 +154,24 @@
                     android:gravity="center">
 
                     <Button
-                        android:id="@+id/M1"
+                        android:id="@+id/M4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:enabled="true"
-                        android:text="1" />
+                        android:text="4" />
 
                     <Button
-                        android:id="@+id/M2"
+                        android:id="@+id/M5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:enabled="true"
-                        android:text="2" />
+                        android:text="5" />
 
                     <Button
-                        android:id="@+id/M3"
+                        android:id="@+id/M6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="3" />
+                        android:text="6" />
                 </TableRow>
 
                 <TableRow
@@ -174,39 +181,13 @@
                     android:stretchColumns="*">
 
                     <Button
-                        android:id="@+id/M4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="4" />
-
-                    <Button
-
-                        android:id="@+id/M5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="5" />
-
-                    <Button
-                        android:id="@+id/M6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="6" />
-
-                </TableRow>
-
-                <TableRow
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center">
-
-                    <Button
                         android:id="@+id/M7"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="7" />
 
                     <Button
+
                         android:id="@+id/M8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -221,27 +202,29 @@
                 </TableRow>
 
                 <TableRow
+
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center">
 
                     <Button
                         android:id="@+id/M10"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="10" />
 
                     <Button
                         android:id="@+id/M11"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="11" />
 
                     <Button
                         android:id="@+id/M12"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="12" />
+
                 </TableRow>
 
                 <TableRow
@@ -251,13 +234,13 @@
 
                     <Button
                         android:id="@+id/M13"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="13" />
 
                     <Button
                         android:id="@+id/M14"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="14" />
 
@@ -266,6 +249,30 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="15" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/M16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="16" />
+
+                    <Button
+                        android:id="@+id/M17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="17" />
+
+                    <Button
+                        android:id="@+id/M18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="18" />
 
                 </TableRow>
             </TableLayout>

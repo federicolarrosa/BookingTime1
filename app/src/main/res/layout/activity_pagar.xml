@@ -4,90 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".principalActivity">
+    tools:context=".pagar">
 
-    <Button
-        android:id="@+id/btnSalir"
+    <TextView
+        android:id="@+id/textView21"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/cerrar_sesion"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Total a Pagar"
+        android:textAlignment="center"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.749" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnRestaurantes"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/restaurantes"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="$ 2000"
+        android:textAlignment="center"
+        android:textColor="#FF0505"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.185"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
 
-    <Button
-        android:id="@+id/btnLector"
-        android:layout_width="0dp"
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:text="@string/lector_qr"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="40dp"
+        android:text="Tarjeta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.224" />
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
-    <Button
-        android:id="@+id/btnrestaurant"
-        android:layout_width="0dp"
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:text="Registrar Restaurante"
-        app:layout_constraintBottom_toTopOf="@+id/btnSalir"
+        android:text="PayPal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.48" />
+        app:layout_constraintTop_toBottomOf="@+id/radioButton" />
 
-   <!-- <Button
-        android:id="@+id/reservaFecha"
-        android:layout_width="0dp"
+    <RadioButton
+        android:id="@+id/radioButton3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:text="reserva"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:text="MercadoPago"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.53" />
--->
+        app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
+
     <Button
-        android:id="@+id/btnCargarMenu"
+        android:id="@+id/btnPagar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="102dp"
         android:layout_marginEnd="32dp"
-        android:text="Cargar Menu"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="hacer pago"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.424"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426" />
+        app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

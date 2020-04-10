@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".CargarMenu"></activity>
+        <activity android:name=".pagar"></activity>
+        <activity android:name=".prePago" />
+        <activity android:name=".CargarMenu" />
         <activity android:name=".Menu" />
         <activity android:name=".reservaHoraMesa" />
         <activity android:name=".reservafecha" />

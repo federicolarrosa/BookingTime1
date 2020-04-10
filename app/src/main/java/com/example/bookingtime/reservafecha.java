@@ -86,7 +86,12 @@ public class reservafecha extends AppCompatActivity {
                 //recuerde que en java los meses inician desde 0
 
                 if (!calendarView.isDaySelected(position)) {
-                    startActivity(new Intent(reservafecha.this,reserva.class));
+                    // mandar datos a reservafecha
+                    Intent intent = new Intent(reservafecha.this, reservaHoraMesa.class);
+                    intent.putExtra("Nombre",Nombre);
+                    startActivity(intent);
+
+
 
                 } else {
                    calendarView.removeDaySeleted(position);

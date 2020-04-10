@@ -17,7 +17,7 @@ public class principalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
-        Button btnReservaFecha= findViewById(R.id.reservaFecha);
+       // Button btnReservaFecha= findViewById(R.id.reservaFecha);
         Button btnSalir = findViewById(R.id.btnSalir);
         Button btnrestaurantes = findViewById(R.id.btnRestaurantes);
         Button btnLector = findViewById(R.id.btnLector);
@@ -30,12 +30,12 @@ public class principalActivity extends AppCompatActivity {
                 CargarMenu();
             }
         });
-        btnReservaFecha.setOnClickListener(new View.OnClickListener() {
+      /*  btnReservaFecha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 reservaHoraMesa();
-            }
-        });
+            }*//*
+        });*/
         btnrestaurant.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

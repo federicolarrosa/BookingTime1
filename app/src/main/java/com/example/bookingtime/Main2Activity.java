@@ -2,6 +2,7 @@ package com.example.bookingtime;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -30,6 +31,7 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         restaurante_recyclerView = findViewById(R.id.restaurantes_recyclerView);
+        restaurante_recyclerView.addItemDecoration(new DividerItemDecoration(this,DividerItemDecoration.VERTICAL));
         restaurante_recyclerView.setLayoutManager(new LinearLayoutManager(this));
         restaurantesLista = new ArrayList<Restaurante>();
 

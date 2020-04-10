@@ -34,15 +34,7 @@ public class reserva extends AppCompatActivity {
     Button btnGenerador,btnGuardar;
     private boolean tienePermisoParaEscribir = true; // Para los permisos en tiempo de ejecución
 
-    private String obtenerTextoParaCodigo() {
-        etTextoParaCodigo.setError(null);
-        String posibleTexto = etTextoParaCodigo.getText().toString();
-        if (posibleTexto.isEmpty()) {
-            etTextoParaCodigo.setError("Escribe el texto del código QR");
-            etTextoParaCodigo.requestFocus();
-        }
-        return posibleTexto;
-    }
+
 
 
     @Override
@@ -50,45 +42,25 @@ public class reserva extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserva);
 
-        personfin=findViewById(R.id.personfinal);
-        horafin=findViewById(R.id.horafinal);
-        etTextoParaCodigo = findViewById(R.id.mesa);
-        String mesahora=getIntent().getStringExtra("MesaHora");
-        String mesapers=getIntent().getStringExtra("MesaPerson");
-        String mesa=getIntent().getStringExtra("Mesa");
 
-        etTextoParaCodigo.setText(mesa);
-        horafin.setText(mesahora);
-        personfin.setText(mesapers);
+
+        String id=getIntent().getStringExtra("id");
+
+
 
         final ImageView imagenCodigo = findViewById(R.id.ivCodigoGenerado);
 
-        btnGenerador = findViewById(R.id.btnGenerador);
-        btnGuardar = findViewById(R.id.btnGuardar);
 
 
-        btnGenerador.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String texto = obtenerTextoParaCodigo();
-                if (texto.isEmpty()) return;
 
-                Bitmap bitmap = QRCode.from(texto).withSize(ANCHURA_CODIGO, ALTURA_CODIGO).bitmap();
+
+
+
+                Bitmap bitmap = QRCode.from(id).withSize(ANCHURA_CODIGO, ALTURA_CODIGO).bitmap();
                 imagenCodigo.setImageBitmap(bitmap);
-            }
-        });
 
-        btnGuardar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String texto = obtenerTextoParaCodigo();
-                if (texto.isEmpty()) return;
-                if (!tienePermisoParaEscribir) {
-                    noTienePermiso();
-                    return;
-                }
                 // Crear stream del código QR
-                ByteArrayOutputStream byteArrayOutputStream = QRCode.from(texto).withSize(ANCHURA_CODIGO, ALTURA_CODIGO).stream();
+                ByteArrayOutputStream byteArrayOutputStream = QRCode.from(id).withSize(ANCHURA_CODIGO, ALTURA_CODIGO).stream();
                 // E intentar guardar
                 FileOutputStream fos;
                 try {
@@ -98,8 +70,7 @@ public class reserva extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-            }
-        });
+
         /*
          * Debería pedirse cuando se está a punto de realizar la acción, no
          * al inicio; pero ese no es el propósito de este código

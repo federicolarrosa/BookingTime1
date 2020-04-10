@@ -14,6 +14,12 @@ public class preMenu extends AppCompatActivity {
     private TextView horafinal;
     private TextView personfinal;
     private TextView ide;
+    private TextView nRestaurant;
+    String nomRestaurante;
+    String id;
+    String mesahora;
+    String mesapers;
+    String mesa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,20 +28,23 @@ public class preMenu extends AppCompatActivity {
 
         Button Modificar=findViewById(R.id.btnMod);
         Button Siguiente=findViewById(R.id.sigMenu);
+        nRestaurant=findViewById(R.id.nRestaurant);
         personfinal=findViewById(R.id.personfinal);
         horafinal=findViewById(R.id.horafinal);
         mesal = findViewById(R.id.mesa);
         ide=findViewById(R.id.id);
 
-        String mesahora=getIntent().getStringExtra("MesaHora");
-        String mesapers=getIntent().getStringExtra("MesaPerson");
-        String mesa=getIntent().getStringExtra("Mesa");
-        String id=getIntent().getStringExtra("id");
+        mesahora=getIntent().getStringExtra("MesaHora");
+        mesapers=getIntent().getStringExtra("MesaPerson");
+        mesa=getIntent().getStringExtra("Mesa");
+        id=getIntent().getStringExtra("id");
+        nomRestaurante=getIntent().getStringExtra("Nombre");
 
         ide.setText(id);
         mesal.setText(mesa);
         horafinal.setText(mesahora);
         personfinal.setText(mesapers);
+        nRestaurant.setText(nomRestaurante);
 
         Modificar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,13 +62,16 @@ public class preMenu extends AppCompatActivity {
     }
     private void siguiente() {
         Intent intent = new Intent(preMenu.this, Menu.class);
-        intent.putExtra("personas",personfinal.getText().toString());
+        intent.putExtra("personas",mesapers);
+        intent.putExtra("Nombre",nomRestaurante);
+        intent.putExtra("Hora",mesahora);
+        intent.putExtra("Mesa",mesa);
+        intent.putExtra("id",id);
         this.startActivity(intent);
-
     }
     private void modificar(){
-        startActivity(new Intent(this, reservaHoraMesa.class));
-       //revisar como colocar enabled solo el elegido
-        ide.setEnabled(true);
+        Intent intent = new Intent(preMenu.this, reservaHoraMesa.class);
+        intent.putExtra("id",id);
+        this.startActivity(intent);
     }
 }
