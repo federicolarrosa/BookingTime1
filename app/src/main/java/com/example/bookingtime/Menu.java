@@ -34,10 +34,11 @@ import java.util.Map;
 
 public class Menu extends AppCompatActivity{
     private TextView Selperson, nRestaurantes;
-    private Spinner Spinnerperson;
+    //private Spinner Spinnerperson;
     private Button BtnPrePago;
-    String id,Menu,Bebidas,Postre,hora,Mesa,SeleccionPersona,ultpersList;
+    String id,Menu,Bebidas,Postre,hora,Mesa,ultpersList;
     int SeleccionPersona1;
+    int ultipersList1;
     Map<String,String> MenuListaSelect = new HashMap<>();
     Map<String,String> BebidasListaSelect = new HashMap<>();
     Map<String,String> PostreListaSelect = new HashMap<>();
@@ -55,7 +56,7 @@ public class Menu extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        Spinnerperson=findViewById(R.id.spinnerPerson);
+       // Spinnerperson=findViewById(R.id.spinnerPerson);
         Selperson=findViewById(R.id.SelPerson);
         nRestaurantes=findViewById(R.id.nRestaurantes);
         BtnPrePago=findViewById(R.id.btnPrePago);
@@ -98,128 +99,141 @@ public class Menu extends AppCompatActivity{
             PersonList.add(i1);
         }
 
-        ArrayAdapter<CharSequence> adapter= new ArrayAdapter(this,R.layout.spinner_item_bookingtime,PersonList);
+
+     /*  ArrayAdapter<CharSequence> adapter= new ArrayAdapter(this,R.layout.spinner_item_bookingtime,PersonList);
         Spinnerperson.setAdapter(adapter);
-        Spinnerperson.setSelection(1);
+
         Spinnerperson.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if (!TextUtils.isEmpty(SeleccionPersona) && TextUtils.isDigitsOnly(SeleccionPersona)) {
-                    SeleccionPersona="1";
-                } else {
 
                     SeleccionPersona=adapter.getItem(i).toString();
                     Selperson.setText(adapter.getItem(i));
 
-
-             }
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
-        });
+        });*/
 
-        ultpersList=PersonList.get(PersonList.size()-1);
-        int ultipersList1=Integer.parseInt(ultpersList);
-        int SeleccionPersona1=Integer.parseInt(SeleccionPersona);
 
-        Log.d("resultado", String.valueOf(ultipersList1));
-        Log.d("resultado", String.valueOf(SeleccionPersona1));
-        if(ultipersList1!=SeleccionPersona1){
-            BtnPrePago.setText("Siguiente");
+            //cambio personList y SeleccionPersona  a int
+            ultpersList = PersonList.get(PersonList.size() - 1);
+            ultipersList1 = Integer.parseInt(ultpersList);
+            SeleccionPersona1 = Integer.parseInt(PersonList.get(0));
 
-        BtnPrePago.setOnClickListener(new View.OnClickListener() {
-            @Override
-            // al hacer click manda datos a activity prepago
-            public void onClick(View view) {
+
+            // si Ultimo numero de la lista es diferente a el selccionado en el spinner  cambia el boton a siguiente
+
+            if ( SeleccionPersona1<=ultipersList1) {
+                Log.d("ultimo numero", String.valueOf(ultipersList1));
+                Log.d("Seleccion", String.valueOf(SeleccionPersona1));
+
+                Selperson.setText(String.valueOf(SeleccionPersona1));
+
+                BtnPrePago.setText("Hacer Pedido");
+                BtnPrePago.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        for (MenuRestaurante menu : MenuLista) {
+                            if (menu.getSeleccion()) {
+                                Menu = menu.getNombre();
+                                MenuListaSelect.put(String.valueOf(SeleccionPersona1), Menu);
+
+                            }
+                        }
+
+                        Log.d("resultado", String.valueOf(MenuListaSelect));
+                        for (MenuRestaurante bebida : BebidasLista) {
+                            if (bebida.getSeleccion()) {
+                                Bebidas = bebida.getNombre();
+                                BebidasListaSelect.put(String.valueOf(SeleccionPersona1), Bebidas);
+                                // Log.d("resultado", String.valueOf(BebidasListaSelect));
+                            }
+                        }
+                        Log.d("resultado", String.valueOf(BebidasListaSelect));
+                        for (MenuRestaurante menu : PostreLista) {
+                            if (menu.getSeleccion()) {
+
+                                Postre = menu.getNombre();
+                                PostreListaSelect.put(String.valueOf(SeleccionPersona1), Postre);
+
+                            }
+                        }
+                        Log.d("resultado", String.valueOf(PostreListaSelect));
+
+
+                        Intent intent = new Intent(Menu.this, prePago.class);
+                        intent.putExtra("Nombre", nRestaurantes.getText().toString());
+                        intent.putExtra("SelMenu", (Serializable) MenuListaSelect);
+                        intent.putExtra("SelBebida", (Serializable) BebidasListaSelect);
+                        intent.putExtra("Postre", (Serializable) PostreListaSelect);
+                        intent.putExtra("Hora", hora);
+                        intent.putExtra("Mesa", Mesa);
+                        intent.putExtra("id", id);
+                        startActivity(intent);
+
+                    }
+                });
+
+
+            } else {
+
+                Log.d("ultimo numero", String.valueOf(ultipersList1));
+                Log.d("Seleccion", String.valueOf(SeleccionPersona1));
+
+                BtnPrePago.setText("Siguiente");
+                Selperson.setText(String.valueOf(SeleccionPersona1));
+                BtnPrePago.setOnClickListener(new View.OnClickListener() {
+
+                    @Override
+                    // al hacer click manda datos a activity prepago
+                    public void onClick(View view) {
               /*  for(int i =1; i <= personSel1; i ++)
                 {
                     String i1=Integer.toString(i);
                     PersonList.add(i1);
                 }*/
 
-                for (MenuRestaurante menu : MenuLista) {
-                    if (menu.getSeleccion()) {
-                        Menu = menu.getNombre();
-                        MenuListaSelect.put(SeleccionPersona,Menu);
+                        for (MenuRestaurante menu : MenuLista) {
+                            if (menu.getSeleccion()) {
+                                Menu = menu.getNombre();
+                                MenuListaSelect.put(String.valueOf(SeleccionPersona1), Menu);
+                                Log.d("resultado menu", String.valueOf(MenuListaSelect));
+                            }
+                        }
 
+
+                        for (MenuRestaurante bebida : BebidasLista) {
+                            if (bebida.getSeleccion()) {
+                                Bebidas = bebida.getNombre();
+                                BebidasListaSelect.put(String.valueOf(SeleccionPersona1), Bebidas);
+                                // Log.d("resultado", String.valueOf(BebidasListaSelect));
+                            }
+                        }
+                        Log.d("resultado bebida", String.valueOf(BebidasListaSelect));
+                        for (MenuRestaurante menu : PostreLista) {
+                            if (menu.getSeleccion()) {
+
+                                Postre = menu.getNombre();
+                                PostreListaSelect.put(String.valueOf(SeleccionPersona1), Postre);
+
+                            }
+                        }
+
+                        Log.d("resultado postre", String.valueOf(PostreListaSelect));
+                        SeleccionPersona1++;
+                        Selperson.setText(String.valueOf(SeleccionPersona1));
+                        Log.d("Seleccion", String.valueOf(SeleccionPersona1));
+                        Log.d("ultimo numero", String.valueOf(ultipersList1));
                     }
-                }
+                });
 
-                Log.d("resultado", String.valueOf(MenuListaSelect));
-                Log.d("Ultimo resultado",ultpersList);
-                for (MenuRestaurante bebida : BebidasLista) {
-                    if (bebida.getSeleccion()) {
-                        Bebidas = bebida.getNombre();
-                        BebidasListaSelect.put(SeleccionPersona,Bebidas);
-                       // Log.d("resultado", String.valueOf(BebidasListaSelect));
-                    }
-                }
-                Log.d("resultado", String.valueOf(BebidasListaSelect));
-                for (MenuRestaurante menu : PostreLista) {
-                    if (menu.getSeleccion()) {
-
-                        Postre = menu.getNombre();
-                        PostreListaSelect.put(SeleccionPersona,Postre);
-
-                    }
-                }
-                Log.d("resultado", String.valueOf(PostreListaSelect));
 
             }
-        });
 
-        }else{
-            BtnPrePago.setText("Hacer Pedido");
-            BtnPrePago.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    for (MenuRestaurante menu : MenuLista) {
-                        if (menu.getSeleccion()) {
-                            Menu = menu.getNombre();
-                            MenuListaSelect.put(SeleccionPersona,Menu);
-
-                        }
-                    }
-
-                    Log.d("resultado", String.valueOf(MenuListaSelect));
-                    for (MenuRestaurante bebida : BebidasLista) {
-                        if (bebida.getSeleccion()) {
-                            Bebidas = bebida.getNombre();
-                            BebidasListaSelect.put(SeleccionPersona,Bebidas);
-                            // Log.d("resultado", String.valueOf(BebidasListaSelect));
-                        }
-                    }
-                    Log.d("resultado", String.valueOf(BebidasListaSelect));
-                    for (MenuRestaurante menu : PostreLista) {
-                        if (menu.getSeleccion()) {
-
-                            Postre = menu.getNombre();
-                            PostreListaSelect.put(SeleccionPersona,Postre);
-
-                        }
-                    }
-                    Log.d("resultado", String.valueOf(PostreListaSelect));
-
-
-
-                    Intent intent = new Intent(Menu.this, prePago.class);
-                    intent.putExtra("Nombre",nRestaurantes.getText().toString());
-                    intent.putExtra("SelMenu", (Serializable) MenuListaSelect);
-                    intent.putExtra("SelBebida", (Serializable) BebidasListaSelect);
-                    intent.putExtra("Postre", (Serializable) PostreListaSelect);
-                    intent.putExtra("Hora",hora);
-                    intent.putExtra("Mesa",Mesa);
-                    intent.putExtra("id",id);
-                    startActivity(intent);
-
-                }
-            });
-
-
-        }
 
 
 
