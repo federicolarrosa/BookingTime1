@@ -127,7 +127,7 @@ public class Menu extends AppCompatActivity{
 
             // si Ultimo numero de la lista es diferente a el selccionado en el spinner  cambia el boton a siguiente
 
-            if ( SeleccionPersona1<=ultipersList1) {
+            if ( SeleccionPersona1>=ultipersList1) {
                 Log.d("ultimo numero", String.valueOf(ultipersList1));
                 Log.d("Seleccion", String.valueOf(SeleccionPersona1));
 
