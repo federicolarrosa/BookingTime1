@@ -26,8 +26,6 @@ public class AdaptadorMenu extends RecyclerView.Adapter<AdaptadorMenu.ViewHolder
     }
 
 
-
-
     @NonNull
     @Override
     public ViewHolderMenu onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -45,7 +43,7 @@ public class AdaptadorMenu extends RecyclerView.Adapter<AdaptadorMenu.ViewHolder
 
 
 
-        //holder.obtenerdatos(MenuRestaurante.get(position));
+
 
 
 
@@ -61,12 +59,14 @@ public class AdaptadorMenu extends RecyclerView.Adapter<AdaptadorMenu.ViewHolder
         CheckBox nMenu;
         TextView tComida;
         TextView tDescMenu;
+        TextView Precio;
 
         public ViewHolderMenu(@NonNull View itemView) {
             super(itemView);
             nMenu=itemView.findViewById(R.id.nmenu);
             tComida= itemView.findViewById(R.id.tComida);
             tDescMenu= itemView.findViewById(R.id.tDesc);
+            Precio=itemView.findViewById(R.id.Precio);
         }
 
          public void agregarDatos(MenuRestaurante menuRestaurante) {
@@ -74,19 +74,23 @@ public class AdaptadorMenu extends RecyclerView.Adapter<AdaptadorMenu.ViewHolder
              nMenu.setText(menuRestaurante.getNombre());
              tComida.setText(menuRestaurante.getTipoComida());
              tDescMenu.setText(menuRestaurante.getDescripcion());
+             Precio.setText(menuRestaurante.getPrecio());
 
              nMenu.setOnCheckedChangeListener(null);
              nMenu.setChecked(false); // menuRestaurante.getSeleccion() otra prueba
+
              nMenu.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
                  @Override
                  public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                      menuRestaurante.setSeleccion(isChecked);
+
+
                  }
              });
+             nMenu.setChecked(false);
          }
-         public void obtenerdatos(MenuRestaurante menuRestaurante){
-             nMenu.getText().toString();
-         }
+
+
      }
 }

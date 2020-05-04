@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/cvRestaurante"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:backgroundTint="#E8E6E5"
+    app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="12dp">
+
+
+        <TextView
+            android:id="@+id/nombre_ReservaCardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/corner_radius_cardview"
+            android:layout_marginTop="@dimen/corner_radius_cardview"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:text="Nombre Restaurante"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/Hora_ReservaCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nombre_ReservaCardview"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:text="Hora Reserva"
+            android:textColor="#FF5722"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/Dia_ReservaCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_below="@id/nombre_ReservaCardview"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:text="Dia Reserva"
+            android:textColor="#FF5722"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/Mesa_ReservaCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Dia_ReservaCardView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:text="Mesa Reservada"
+            android:textColor="#FF5722"
+            android:visibility="visible" />
+
+
+        <TextView
+            android:id="@+id/PerReserva_ReservaCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Dia_ReservaCardView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="false"
+            android:layout_marginStart="60dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:layout_toRightOf="@id/Mesa_ReservaCardView"
+            android:text="Personas Mesa"
+            android:textAlignment="center"
+            android:textColor="#D84315"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnQR"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PerReserva_ReservaCardView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="false"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/btnModificar"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="#2E7D32"
+            android:text="Ver QR" />
+
+        <Button
+            android:id="@+id/btnModificar"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PerReserva_ReservaCardView"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/btnEliminar"
+            android:background="@drawable/button_rounded"
+            android:text="Modificar" />
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/PerReserva_ReservaCardView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/button_rounded"
+            android:backgroundTint="#FF0909"
+            android:text="Eliminar" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

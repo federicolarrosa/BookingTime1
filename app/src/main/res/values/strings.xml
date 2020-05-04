@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">bookingtime</string>
+    <string name="app_name">Bookingtime</string>
     <!-- Strings related to login -->
     <string name="prompt_email" translatable="false">Usuario</string>
     <string name="prompt_password" translatable="false">Contraseña</string>

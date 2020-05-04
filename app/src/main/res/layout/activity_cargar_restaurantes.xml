@@ -134,10 +134,11 @@
                     android:layout_height="wrap_content"
                     android:checked="true"
                     android:focusable="auto"
-                    android:text="Lugar para fumadores" />
+                    android:text="Zona fumadores" />
             </TableRow>
 
             <Button
+                android:background="@drawable/button_rounded"
                 android:id="@+id/btnRegRes"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

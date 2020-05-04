@@ -10,6 +10,7 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
@@ -42,6 +43,14 @@ public class RestauranteDetalle extends AppCompatActivity {
     protected void onCreate (Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.restaurantre_detalle);
+
+//Mostrar icono app en el actionbar
+        //Obtenemos la ActionBar instalada por AppCompatActivity
+        ActionBar actionBar = getSupportActionBar();
+
+        //Establecemos el icono en la ActionBar
+        actionBar.setIcon(R.mipmap.ic_launcher1);
+        actionBar.setDisplayShowHomeEnabled(true);
 
 
         btnRegistrarFecha= findViewById(R.id.btnReservarFecha);
@@ -107,5 +116,6 @@ private void mandardatos(){
     intent.putExtra("Nombre",getNombre());
     intent.putExtra("Imagen", getImagen());
     this.startActivity(intent);
-}
+    finish();
+    }
 }

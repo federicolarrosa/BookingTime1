@@ -16,7 +16,7 @@
         android:text="Nombre Resturante"
         android:textAlignment="center"
         android:textColor="#FF0000"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,7 +31,7 @@
         android:text="Seleccionaste la Mesa"
         android:textAlignment="center"
         android:textColor="#FF0000"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,28 +59,45 @@
         android:text="Personas"
         android:textAlignment="textStart"
         android:textColor="#FF0000"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horafinal" />
+        app:layout_constraintTop_toBottomOf="@+id/dia" />
 
     <TextView
         android:id="@+id/horafinal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:text="Hora"
         android:textAlignment="center"
         android:textColor="#FF0000"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mesa" />
 
+    <TextView
+        android:id="@+id/dia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Dia"
+        android:textAlignment="center"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horafinal" />
+
     <Button
         android:id="@+id/sigMenu"
+        android:background="@drawable/button_rounded"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -100,13 +117,14 @@
         android:layout_marginEnd="32dp"
         android:text="¿Esta todo Bien?  Dale a siguiente"
         android:textColor="#FF5722"
-        android:textSize="18sp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/personfinal" />
 
     <Button
         android:id="@+id/btnMod"
+        android:background="@drawable/button_rounded"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -128,7 +146,7 @@
         android:text="¿Necesitas modificar algo?"
         android:textAlignment="textStart"
         android:textColor="#FF5722"
-        android:textSize="18sp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sigMenu" />
@@ -151,13 +169,14 @@
         android:layout_height="27dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="8dp"
         android:text="N° de Personas:"
         android:textAlignment="center"
         android:textColor="#FA0101"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/personfinal"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/horafinal" />
+        app:layout_constraintTop_toBottomOf="@+id/dia" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

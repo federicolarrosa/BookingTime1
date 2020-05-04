@@ -9,35 +9,44 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher1"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher1"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".pagar"></activity>
-        <activity android:name=".prePago" />
-        <activity android:name=".CargarMenu" />
-        <activity android:name=".Menu" />
-        <activity android:name=".reservaHoraMesa" />
-        <activity android:name=".reservafecha" />
-        <activity android:name=".cargarRestaurantes" />
-        <activity android:name=".Main2Activity" />
-        <activity android:name=".cosinaActivity" />
-        <activity android:name=".reserva" />
-        <activity android:name=".lectorQR" />
-        <activity android:name=".RestauranteDetalle" />
-        <activity android:name=".principalActivity" />
-        <activity android:name=".Registro" />
-        <activity android:name=".preMenu" />
-        <activity android:name=".MainActivity">
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ModificarReserva" />
+        <activity android:name=".MostrarQR" />
+        <activity android:name=".ModReserva" />
+        <activity android:name=".pagar" />
+        <activity android:name=".prePago" />
+        <activity android:name=".CargarMenu" />
+        <activity android:name=".Menu" />
+        <activity android:name=".reservaHoraMesa" />
+        <activity android:name=".reservafecha" />
+        <activity android:name=".cargarRestaurantes" />
+        <activity android:name=".Main2Activity"/>
+        <activity android:name=".cosinaActivity" />
+        <activity android:name=".reserva" />
+        <activity android:name=".lectorQR" />
+        <activity android:name=".RestauranteDetalle" />
+        <activity android:name=".principalActivity"/>
+        <activity android:name=".Registro" />
+        <activity android:name=".preMenu" />
+        <activity android:name=".MainActivity"/>
+
+
         <activity
             android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"

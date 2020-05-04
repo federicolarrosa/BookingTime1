@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
 
     <TextView
@@ -16,29 +15,26 @@
         android:text="Persona " />
 
     <TableLayout
+        android:stretchColumns="0,1,2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:divider="@android:drawable/divider_horizontal_textfield"
+            android:gravity="right|left"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/txtMenu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="64dp"
-                android:layout_marginTop="4dp"
-                android:paddingRight="220dp"
-                android:text="Menu" />
-
-            <TextView
-                android:id="@+id/txtMcant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="8dp"
-                android:text="x2" />
+                android:layout_marginEnd="8dp"
+                android:text="Menu" />
 
             <TextView
                 android:id="@+id/textView38"
@@ -46,7 +42,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginRight="2dp"
-                android:text="$" />
+                android:text="$"
+                android:textAlignment="viewEnd" />
 
             <TextView
                 android:id="@+id/txtMprecio"
@@ -59,25 +56,17 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/txtBebida"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="64dp"
-                android:layout_marginTop="4dp"
-                android:paddingRight="220dp"
-                android:text="Bebida" />
-
-            <TextView
-                android:id="@+id/txtBcant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="8dp"
-                android:text="x2" />
+                android:layout_marginEnd="8dp"
+                android:text="Bebida" />
 
             <TextView
                 android:id="@+id/textView41"
@@ -85,7 +74,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginRight="2dp"
-                android:text="$" />
+                android:text="$"
+                android:textAlignment="viewEnd" />
 
             <TextView
                 android:id="@+id/txtBprecio"
@@ -97,25 +87,17 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/txtPostre"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="64dp"
-                android:layout_marginTop="4dp"
-                android:paddingRight="220dp"
-                android:text="Postre" />
-
-            <TextView
-                android:id="@+id/txtPcant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="4dp"
-                android:layout_marginRight="8dp"
-                android:text="x2" />
+                android:layout_marginEnd="8dp"
+                android:text="Postre" />
 
             <TextView
                 android:id="@+id/textView44"
@@ -123,7 +105,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginRight="2dp"
-                android:text="$" />
+                android:text="$"
+                android:textAlignment="viewEnd" />
 
             <TextView
                 android:id="@+id/txtPprecio"

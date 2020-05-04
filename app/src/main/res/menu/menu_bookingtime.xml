@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/apk/tools"
+    tools:context=".principalActivity"
+   >
+
+
+
+    <item android:id="@+id/ModificarReserva"
+        android:title="Modificar Reserva"/>
+
+    <item android:id="@+id/RegistrarRestaurante"
+        android:title="Registrar Restaurante"/>
+
+    <item android:id="@+id/CargarMenu"
+        android:title="Cargar Menu"/>
+
+    <item android:id="@+id/LectorQR"
+        android:title="Lector QR"/>
+
+
+    <item android:id="@+id/CerrarSesion"
+        android:title="Cerrar Sesion"/>
+
+
+</menu>

@@ -15,6 +15,7 @@
         android:layout_marginEnd="32dp"
         android:text="Agrega el Menu "
         android:textAlignment="center"
+        android:textColor="#FF5722"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,18 +60,13 @@
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <TextView
-        android:id="@+id/tipoMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
-
-    <TextView
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:text="Tipo de Menu:"
+        android:textColor="#FF5722"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NomMenu" />
@@ -99,6 +95,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
         android:text="Cargar Menu"
+        android:background="@drawable/button_rounded"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -122,9 +119,24 @@
         android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:text="Selecciona el tipo de Comida o Bebida a Agregar"
+        android:textColor="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <EditText
+        android:id="@+id/precioM"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="Agregue el precio"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DescMenu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

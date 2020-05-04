@@ -7,25 +7,40 @@
     tools:context=".pagar">
 
     <TextView
-        android:id="@+id/textView21"
-        android:layout_width="0dp"
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:text="Total a Pagar"
+        android:text="Ya casi terminamos "
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/textView21"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="Total a Pagar"
+        android:textAlignment="center"
+        android:textColor="#FF5722"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView28" />
+
+    <TextView
+        android:id="@+id/total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:text="$ 2000"
         android:textAlignment="center"
@@ -40,12 +55,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:text="Tarjeta"
+        android:textColor="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+        app:layout_constraintTop_toBottomOf="@id/textView24" />
 
     <RadioButton
         android:id="@+id/radioButton2"
@@ -55,6 +71,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:text="PayPal"
+        android:textColor="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,6 +84,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:text="MercadoPago"
+        android:textColor="#FF5722"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,6 +92,7 @@
 
     <Button
         android:id="@+id/btnPagar"
+        android:background="@drawable/button_rounded"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -83,5 +102,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="De que forma desea pagar su reserva"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

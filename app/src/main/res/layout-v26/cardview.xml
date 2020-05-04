@@ -1,168 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/cvRestaurante"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:backgroundTint="#E8E6E5"
+    app:cardCornerRadius="20dp">
 
-    <androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cvRestaurante"
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        app:cardCornerRadius="@dimen/corner_radius_cardview">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout"
+        <ImageView
+            android:id="@+id/imagen_cardView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="280dp" />
 
-            <ImageView
-                android:id="@+id/imagen_cardView"
-                android:layout_width="match_parent"
-                android:layout_height="280dp"
-                />
-
-            <TextView
-                android:id="@+id/nombre_cardView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imagen_cardView"
-                android:text="@string/pNombre"
-                android:textColor="#000000"
-                android:textSize="@dimen/nombre_cardview"
-                android:textStyle="bold"
-                android:layout_margin="@dimen/corner_radius_cardview"/>
+        <TextView
+            android:id="@+id/nombre_cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagen_cardView"
+            android:layout_marginStart="@dimen/corner_radius_cardview"
+            android:layout_marginTop="@dimen/corner_radius_cardview"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:text="@string/pNombre"
+            android:textColor="#000000"
+            android:textSize="36sp"
+            android:textStyle="bold" />
 
 
-            <ImageView
-                android:id="@+id/icon_ubicacion"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_below="@id/nombre_cardView"
+        <ImageView
+            android:id="@+id/icon_ubicacion"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/nombre_cardView"
 
-                android:layout_marginStart="@dimen/corner_radius_cardview"
-                android:layout_marginLeft="@dimen/corner_radius_cardview"
-                android:layout_marginTop="@dimen/corner_radius_cardview"
-                android:layout_marginEnd="@dimen/corner_radius_cardview"
-                android:layout_marginBottom="@dimen/corner_radius_cardview"
-                android:visibility="visible"
-                app:srcCompat="@drawable/baseline_place_black_18dp" />
+            android:layout_marginStart="@dimen/corner_radius_cardview"
+            android:layout_marginLeft="@dimen/corner_radius_cardview"
+            android:layout_marginTop="@dimen/corner_radius_cardview"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:visibility="visible"
+            app:srcCompat="@drawable/baseline_place_black_18dp" />
 
-            <ImageView
-                android:id="@+id/icon_telefono"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_below="@id/ubicacion_cardView"
+        <ImageView
+            android:id="@+id/icon_telefono"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_below="@id/ubicacion_cardView"
 
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="4dp"
-                android:layout_marginLeft="@dimen/corner_radius_cardview"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="@dimen/corner_radius_cardview"
-                android:layout_marginRight="@dimen/corner_radius_cardview"
-                android:layout_marginBottom="@dimen/corner_radius_cardview"
-                android:visibility="visible"
-                app:srcCompat="@drawable/baseline_call_black_18dp" />
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="@dimen/corner_radius_cardview"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginRight="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:visibility="visible"
+            app:srcCompat="@drawable/baseline_call_black_18dp" />
 
-            <TextView
-                android:id="@+id/ubicacion_cardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/nombre_cardView"
-                android:layout_marginStart="@dimen/corner_radius_cardview"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="@dimen/corner_radius_cardview"
-                android:layout_marginBottom="@dimen/corner_radius_cardview"
-                android:layout_toRightOf="@id/icon_ubicacion"
-                android:text="@string/pUbicacion"
-                android:textColor="#2196F3"
-                android:visibility="visible" />
+        <TextView
+            android:id="@+id/ubicacion_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nombre_cardView"
+            android:layout_marginStart="@dimen/corner_radius_cardview"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:layout_toRightOf="@id/icon_ubicacion"
+            android:text="@string/pUbicacion"
+            android:textColor="#FF5722"
+            android:visibility="visible" />
 
-            <TextView
-                android:id="@+id/telefono_cardView"
-                android:layout_width="149dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/ubicacion_cardView"
-                android:layout_marginStart="@dimen/corner_radius_cardview"
-                android:layout_marginLeft="4dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="@dimen/corner_radius_cardview"
-                android:layout_marginBottom="@dimen/corner_radius_cardview"
-                android:layout_toRightOf="@id/icon_telefono"
-                android:text="@string/pTelefono"
-                android:textColor="#03A9F4"
-                android:visibility="visible" />
+        <TextView
+            android:id="@+id/telefono_cardView"
+            android:layout_width="149dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ubicacion_cardView"
+            android:layout_marginStart="@dimen/corner_radius_cardview"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:layout_toRightOf="@id/icon_telefono"
+            android:text="@string/pTelefono"
+            android:textColor="#FF5722"
+            android:visibility="visible" />
 
-            <ImageView
-                android:id="@+id/icon_email"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+        <ImageView
+            android:id="@+id/icon_email"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
 
-                android:layout_below="@id/icon_telefono"
-                android:layout_marginStart="@dimen/corner_radius_cardview"
-                android:layout_marginTop="@dimen/corner_radius_cardview"
-                android:layout_marginEnd="@dimen/corner_radius_cardview"
-                android:layout_marginBottom="@dimen/corner_radius_cardview"
-                android:visibility="visible"
-                app:srcCompat="@drawable/ic_email_black_24dp" />
+            android:layout_below="@id/icon_telefono"
+            android:layout_marginStart="@dimen/corner_radius_cardview"
+            android:layout_marginTop="@dimen/corner_radius_cardview"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_email_black_24dp" />
 
-            <TextView
-                android:id="@+id/email_cardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/telefono_cardView"
-                android:layout_marginStart="@dimen/corner_radius_cardview"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="@dimen/corner_radius_cardview"
-                android:layout_marginBottom="@dimen/corner_radius_cardview"
-                android:layout_toRightOf="@id/icon_email"
-                android:text="@string/pEmail"
-                android:textColor="#03A9F4"
-                android:visibility="visible" />
+        <TextView
+            android:id="@+id/email_cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/telefono_cardView"
+            android:layout_marginStart="@dimen/corner_radius_cardview"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:layout_toRightOf="@id/icon_email"
+            android:text="@string/pEmail"
+            android:textColor="#FF5722"
+            android:visibility="visible" />
 
-            <TextView
-                android:id="@+id/tipoComida_cardView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/email_cardView"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="@dimen/corner_radius_cardview"
-                android:layout_marginTop="@dimen/corner_radius_cardview"
-                android:layout_marginEnd="@dimen/corner_radius_cardview"
-                android:layout_marginBottom="@dimen/corner_radius_cardview"
-                android:layout_toEndOf="@id/imageView4"
-                android:text="@string/ptipoComida"
-                android:textColor="#03A9F4"
-                android:visibility="visible" />
+        <TextView
+            android:id="@+id/tipoComida_cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_cardView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/corner_radius_cardview"
+            android:layout_marginTop="@dimen/corner_radius_cardview"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:layout_toEndOf="@id/imageView4"
+            android:text="@string/ptipoComida"
+            android:textColor="#FF5722"
+            android:visibility="visible" />
 
-            <TextView
-                android:id="@+id/resumen_cardView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="@dimen/corner_radius_cardview"
-                android:layout_marginLeft="-36dp"
-                android:layout_marginEnd="@dimen/corner_radius_cardview"
-                android:layout_marginBottom="280dp"
-                android:layout_toRightOf="@id/email_cardView"
-                android:text="@string/pResumen"
-                android:textColor="#BDBDBD"
-                android:visibility="invisible" />
+        <TextView
+            android:id="@+id/resumen_cardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/corner_radius_cardview"
+            android:layout_marginLeft="-36dp"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="280dp"
+            android:layout_toRightOf="@id/email_cardView"
+            android:text="@string/pResumen"
+            android:textColor="#BDBDBD"
+            android:visibility="invisible" />
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
-                android:layout_below="@+id/icon_email"
-                android:layout_marginStart="@dimen/corner_radius_cardview"
-                android:layout_marginTop="@dimen/corner_radius_cardview"
-                android:layout_marginEnd="@dimen/corner_radius_cardview"
-                android:layout_marginBottom="@dimen/corner_radius_cardview"
-                android:visibility="visible"
-                app:srcCompat="@drawable/ic_local_dining_black_24dp" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_below="@+id/icon_email"
+            android:layout_marginStart="@dimen/corner_radius_cardview"
+            android:layout_marginTop="@dimen/corner_radius_cardview"
+            android:layout_marginEnd="@dimen/corner_radius_cardview"
+            android:layout_marginBottom="@dimen/corner_radius_cardview"
+            android:visibility="visible"
+            app:srcCompat="@drawable/ic_local_dining_black_24dp" />
 
-        </RelativeLayout>
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

@@ -22,14 +22,14 @@ import java.util.ArrayList;
 public class Adaptador extends RecyclerView.Adapter<Adaptador.RestauranteViewHolder> {
 
     Context context;
-    ArrayList<com.example.bookingtime.Restaurante> restaurantes;
-    Activity activity;
+    ArrayList<Restaurante> restaurantes;
+   // Activity activity;
 
-    public Adaptador (Context context, ArrayList<com.example.bookingtime.Restaurante> restaurante)
+    public Adaptador (Context context, ArrayList<Restaurante> restaurantes)
     {
         this.context = context;
-        this.restaurantes = restaurante;
-        this.activity = activity;
+        this.restaurantes = restaurantes;
+       // this.activity = activity;
     }
 
     //Inflar el layout y lo pasara al viewHolder para que el obtenga los views.
@@ -88,6 +88,7 @@ public class Adaptador extends RecyclerView.Adapter<Adaptador.RestauranteViewHol
                 intent.putExtra("Wifi", restaurante.getWifi());
                 intent.putExtra("Fumar", restaurante.getFumar());
                 context.startActivity(intent);
+                ((Activity)context).finish();
 
 
             }

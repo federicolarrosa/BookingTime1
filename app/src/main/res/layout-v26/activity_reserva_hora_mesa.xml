@@ -29,7 +29,8 @@
                 android:layout_marginRight="32dp"
                 android:text="Nombre Restaurante"
                 android:textAlignment="center"
-                android:textSize="30sp" />
+                android:textColor="#FF5722"
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -40,7 +41,8 @@
                 android:layout_marginEnd="32dp"
                 android:text="Ahora selecciona la hora"
                 android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textColor="#FF5722"
+                android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -50,12 +52,13 @@
 
                 <Spinner
                     android:id="@+id/horaRes"
-                    android:layout_width="131dp"
-                    android:layout_height="47dp"
+                    android:layout_width="126dp"
+                    android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="32dp"
                     android:spinnerMode="dropdown"
+
                     android:textAlignment="center" />
 
                 <TextView
@@ -69,15 +72,16 @@
             </LinearLayout>
 
             <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="32dp"
-                    android:text="¿Cuantas personas son?"
-                    android:textAlignment="center"
-                    android:textSize="18sp" />
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="¿Cuantas personas son?"
+                android:textAlignment="center"
+                android:textColor="#FF5722"
+                android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -86,8 +90,8 @@
 
                 <Spinner
                     android:id="@+id/personRes"
-                    android:layout_width="130dp"
-                    android:layout_height="47dp"
+                    android:layout_width="131dp"
+                    android:layout_height="match_parent"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="32dp"
                     android:spinnerMode="dropdown"
@@ -109,9 +113,10 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
-                android:layout_marginBottom="33dp"
+                android:layout_marginBottom="16dp"
                 android:text="Elige la Mesa Disponible"
                 android:textAlignment="center"
+                android:textColor="#FF5722"
                 android:textSize="18sp" />
 
             <TableLayout
@@ -130,17 +135,21 @@
 
                     <Button
                         android:id="@+id/M1"
-                        android:layout_width="wrap_content"
+                        android:layout_width="45dp"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/ic_reservamesar"
+
                         android:text="1" />
 
                     <Button
                         android:id="@+id/M2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/ic_reservamesar"
                         android:text="2" />
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -154,6 +163,7 @@
                     android:gravity="center">
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -161,6 +171,7 @@
                         android:text="4" />
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -168,6 +179,7 @@
                         android:text="5" />
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -181,19 +193,21 @@
                     android:stretchColumns="*">
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M7"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="7" />
 
                     <Button
-
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M8"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="8" />
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -208,18 +222,21 @@
                     android:gravity="center">
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="10" />
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M11"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="11" />
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -233,18 +250,21 @@
                     android:gravity="center">
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="13" />
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="14" />
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M15"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -257,18 +277,21 @@
                     android:gravity="center">
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M16"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="16" />
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M17"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="17" />
 
                     <Button
+                        android:background="@drawable/ic_reservamesar"
                         android:id="@+id/M18"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

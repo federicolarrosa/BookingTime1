@@ -15,6 +15,7 @@
         android:layout_marginEnd="24dp"
         android:text="Nombre Restaurante"
         android:textAlignment="center"
+        android:textColor="#D84315"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -29,30 +30,24 @@
         android:layout_marginBottom="16dp"
         android:text="¿Que dia vas a reservar?"
         android:textAlignment="center"
+        android:textColor="#D84315"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/calendarView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <com.darwindeveloper.onecalendar.views.OneCalendarView
+    <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="404dp"
-        app:backgroundColorDaysOfAnotherMonth="#505050"
-        app:backgroundColorDaysOfMonth="#53c0c0c1"
-        app:backgroundColorSelectedDay="#d2d2d2"
-        app:calendarBackgroundColor="#FFFFFF"
-        app:calendarLanguage="ES"
-        app:currentDayBackgroundColor="#FF5722"
+
+        android:alwaysDrawnWithCache="true"
+        android:selectedDateVerticalBar="@color/colorPrimary"
+        android:selectedWeekBackgroundColor="#D84315"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:mainBackgroundColor="#5A5A5A"
-        app:textColorDaysOfAnotherMonth="#fff"
-        app:textColorDaysOfMonth="#757575"
-        app:textColorMonthAndYear="#3C3C3C"
-        app:textColorSelectedDay="#5E5E5E" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

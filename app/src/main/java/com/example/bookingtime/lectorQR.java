@@ -1,5 +1,6 @@
 package com.example.bookingtime;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,16 +23,25 @@ public class lectorQR extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lector_q_r);
 
+        //Mostrar icono app en el actionbar
+        //Obtenemos la ActionBar instalada por AppCompatActivity
+        ActionBar actionBar = getSupportActionBar();
+
+        //Establecemos el icono en la ActionBar
+        actionBar.setIcon(R.mipmap.ic_launcher1);
+        actionBar.setDisplayShowHomeEnabled(true);
+
+
         txCodigo= findViewById(R.id.txcodigo);
         btnEsc= findViewById(R.id.btnEscan);
       //  btnRes= findViewById(R.id.btnRes);
         // boton generar
-        btnRes.setOnClickListener(new View.OnClickListener() {
+      /*  btnRes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 reserva();
             }
-        });
+        });*/
 
 
         // Accion boton escanear
@@ -42,9 +52,9 @@ public class lectorQR extends AppCompatActivity {
             }
         });
     }
-    public void reserva(){
+    /*public void reserva(){
         startActivity(new Intent(this,reserva.class));
-    }
+    }*/
 
     // Metodo para escanear
     public void escaner(){

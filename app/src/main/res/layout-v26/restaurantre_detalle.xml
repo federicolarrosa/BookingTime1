@@ -7,7 +7,7 @@
     <ImageView
         android:id="@+id/imagen_relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="250dp"
 
         android:contentDescription="@string/todo1" />
 
@@ -61,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/resumen_relativeLayout"
-        android:layout_marginStart="@dimen/corner_radius_cardview"
+        android:layout_marginStart="24dp"
         android:layout_marginLeft="@dimen/corner_radius_cardview"
         android:layout_marginTop="@dimen/corner_radius_cardview"
         android:layout_marginEnd="@dimen/corner_radius_cardview"
@@ -95,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tarjetas_checkbox"
-        android:layout_marginStart="@dimen/corner_radius_cardview"
+        android:layout_marginStart="51dp"
         android:layout_marginLeft="@dimen/corner_radius_cardview"
         android:layout_marginTop="@dimen/corner_radius_cardview"
         android:layout_marginEnd="@dimen/corner_radius_cardview"
@@ -111,7 +111,7 @@
     <Button
         android:id="@+id/btnReservarFecha"
         android:layout_width="match_parent"
-        android:layout_height="49dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/estacionamiento_checkbox"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
@@ -119,6 +119,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="32dp"
+        android:background="@drawable/button_rounded"
         android:text="Reservar Fecha y hora" />
 
 

@@ -2,6 +2,7 @@ package com.example.bookingtime;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -56,6 +57,14 @@ public class cargarRestaurantes extends AppCompatActivity {
         setContentView(R.layout.activity_cargar_restaurantes);
         mStorageRef = FirebaseStorage.getInstance().getReference();
 
+        //Mostrar icono app en el actionbar
+        //Obtenemos la ActionBar instalada por AppCompatActivity
+        ActionBar actionBar = getSupportActionBar();
+
+        //Establecemos el icono en la ActionBar
+        actionBar.setIcon(R.mipmap.ic_launcher1);
+        actionBar.setDisplayShowHomeEnabled(true);
+
         mNombre = findViewById(R.id.Name);
         mtipoComida = findViewById(R.id.tipoComida);
         mResumen = findViewById(R.id.Resumen);
@@ -100,54 +109,83 @@ public class cargarRestaurantes extends AppCompatActivity {
 
     private void cargardatos(String nombre, String tipoComida, String Resumen, String Direccion, String Email, String Telefono, Uri filePath, boolean Tarjetas, boolean Fumar, boolean Estacionamiento, boolean Wifi) {
 
-        if (filePath!=null) {
-            StorageReference fotoref= mStorageRef.child("imagenes").child(filePath.getLastPathSegment());
-            fotoref.putFile(filePath).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-                @Override
-                public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
-                    if (!task.isSuccessful()) {
-                        throw new Exception();
-                    }
-                    return fotoref.getDownloadUrl();
-                }
-            }).addOnCompleteListener(new OnCompleteListener<Uri>() {
-                @Override
-                public void onComplete(@NonNull Task<Uri> task) {
-                    if (task.isSuccessful()){
-                        Uri downloadLink = task.getResult();
-                        FirebaseDatabase database = FirebaseDatabase.getInstance();
-                        DatabaseReference myRef = database.getReference();
-                        Map<String, Object> datosRestaurante= new HashMap<>();
-                        datosRestaurante.put("Nombre", nombre);
-                        datosRestaurante.put("tipoComida", tipoComida);
-                        datosRestaurante.put("Resumen", Resumen);
-                        datosRestaurante.put("Direccion", Direccion);
-                        datosRestaurante.put("Email", Email);
-                        datosRestaurante.put("Telefono", Telefono);
-                        datosRestaurante.put("Tarjetas", Tarjetas);
-                        datosRestaurante.put("Fumar", Fumar);
-                        datosRestaurante.put("Estacionamiento", Estacionamiento);
-                        datosRestaurante.put("Wifi", Wifi);
-                        datosRestaurante.put("Imagen", downloadLink.toString());
+         if (mNombre.getText().toString().isEmpty()) {
+            Toast.makeText(cargarRestaurantes.this, "Debe Agregar Nombre De Resturante.", Toast.LENGTH_SHORT).show();
 
-                        myRef.child("Restaurantes").push().setValue(datosRestaurante).addOnCompleteListener(new OnCompleteListener<Void>() {
-                            @Override
-                            public void onComplete(@NonNull Task<Void> task) {
+        } else if (mtipoComida.getText().toString().isEmpty()) {
+            Toast.makeText(cargarRestaurantes.this, "Eliga tipo comida.", Toast.LENGTH_SHORT).show();
 
-                                Toast.makeText(cargarRestaurantes.this,"Cargado con exito.", Toast.LENGTH_SHORT).show();
-                            }
-                        }).addOnFailureListener(new OnFailureListener() {
-                            @Override
-                            public void onFailure(@NonNull Exception e) {
-                                Toast.makeText(cargarRestaurantes.this,"Ups.. hubo un problema Intenta nuevamente.", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    }
-                }
-            });
+        } else if (mDireccion.getText().toString().isEmpty()) {
+            Toast.makeText(cargarRestaurantes.this, "Debe agregar una direccion.", Toast.LENGTH_SHORT).show();
+
+        } else if (mEmail.getText().toString().isEmpty()) {
+            Toast.makeText(cargarRestaurantes.this, "Debe agregar un correo electronico.", Toast.LENGTH_SHORT).show();
+
+        } else if (mTelefono.getText().toString().isEmpty()) {
+            Toast.makeText(cargarRestaurantes.this, "Debe agregar un numero de Telefono.", Toast.LENGTH_SHORT).show();
+
+        } else if (mResumen.getText().toString().isEmpty()) {
+            Toast.makeText(cargarRestaurantes.this, "Debe agregar un Resumen del Resturante.", Toast.LENGTH_SHORT).show();
+
         }
 
-    }
+
+            if (filePath != null) {
+                StorageReference fotoref = mStorageRef.child("imagenes").child(filePath.getLastPathSegment());
+                fotoref.putFile(filePath).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
+                    @Override
+                    public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception {
+                        if (!task.isSuccessful()) {
+                            throw new Exception();
+                        }
+                        return fotoref.getDownloadUrl();
+                    }
+                }).addOnCompleteListener(new OnCompleteListener<Uri>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Uri> task) {
+                        if (task.isSuccessful()) {
+                            Uri downloadLink = task.getResult();
+                            FirebaseDatabase database = FirebaseDatabase.getInstance();
+                            DatabaseReference myRef = database.getReference();
+                            Map<String, Object> datosRestaurante = new HashMap<>();
+                            datosRestaurante.put("Nombre", nombre);
+                            datosRestaurante.put("tipoComida", tipoComida);
+                            datosRestaurante.put("Resumen", Resumen);
+                            datosRestaurante.put("Direccion", Direccion);
+                            datosRestaurante.put("Email", Email);
+                            datosRestaurante.put("Telefono", Telefono);
+                            datosRestaurante.put("Tarjetas", Tarjetas);
+                            datosRestaurante.put("Fumar", Fumar);
+                            datosRestaurante.put("Estacionamiento", Estacionamiento);
+                            datosRestaurante.put("Wifi", Wifi);
+                            datosRestaurante.put("Imagen", downloadLink.toString());
+
+                            myRef.child("Restaurantes").push().setValue(datosRestaurante).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+
+                                    Toast.makeText(cargarRestaurantes.this, "Cargado con exito.", Toast.LENGTH_SHORT).show();
+                                    mDireccion.setText("");
+                                    mEmail.setText("");
+                                    mNombre.setText("");
+                                    mResumen.setText("");
+                                    mTelefono.setText("");
+                                    mtipoComida.setText("");
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(cargarRestaurantes.this, "Ups.. hubo un problema Intenta nuevamente.", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                        }
+                    }
+                });
+            }else{
+                Toast.makeText(cargarRestaurantes.this, "Debe agregar una imagen.", Toast.LENGTH_SHORT).show();
+            }
+
+        }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -162,14 +200,7 @@ public class cargarRestaurantes extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            // StorageReference filePath= mStorageRef.child("imagenes").child(uri.getLastPathSegment());
 
-            /*filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    Toast.makeText(cargarRestaurantes.this, "Se subio con Exito ", Toast.LENGTH_SHORT).show();
-                }
-            });*/
         }
     }
 }
